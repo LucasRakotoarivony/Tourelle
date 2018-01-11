@@ -7,6 +7,7 @@ Durant cette séance j'ai cherché le matériel nécessaire à ce projet. J'ai d
 
 
 Séance du 10 janvier 2018.
+
 J'ai installé et commencé à utiliser PixyMon, l'application permettant de visualiser ce que voit la caméra Pixy.
 J'ai aussi commencé à apprendre à utiliser le moteur pas à pas à l'aide de tuto et des exemples proposé par Arduino.
 J'ai également demonté et utilisé le Nerf pour comprendre son fonctionnement et comment les élèves des années précédentes l'avaient utilisé.

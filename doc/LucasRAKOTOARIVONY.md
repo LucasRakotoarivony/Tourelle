@@ -17,3 +17,10 @@ De plus j'ai demandé à Monsieur Masson un servo-moteur afin de pouvoir déclen
 Séance du 19 janvier 2018.
 
 J'ai démonté le Nerf afin d'accéder au mécanisme permettant de déclencher le tir. J'ai décidé d'y accrocher un embout de servomoteur pour pouvoir déclencher le tir sur commande de l'Arduino. Tout d'abord j'ai utilisé du scotch mais dès que je commencais à faire tourner le moteur, le scotch se détachait et l'embout également. J'ai donc utilisé 2 serre cable et du fil de fer pour maintenir l'embout. Cette solution fonctionne pour maintenir l'embout cependant si je branche le servomoteur et que je le commande, c'est le moteur entier qui tourne et non l'embout. Je vais donc devoir fixer le moteur pour l'empêcher de tourner. 
+
+Séance du 24 janvier 2018.
+
+J'ai passé une bonne partie de la séance a écouté les différents exposés de mes camarades.
+Dans le temps restant de la séance j'ai réparé le chargeur du Nerf pour que à chaque tir la seconde cartouche se positionne correctement.
+J'ai également cherché une solution pour fixer le servomoteur au Nerf de manière solide.
+Et enfin j'ai cherché une solution pour déclencher un chronomètre si un objet était détecté par la caméra Pixy.

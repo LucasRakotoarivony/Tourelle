@@ -24,3 +24,9 @@ J'ai passé une bonne partie de la séance a écouté les différents exposés d
 Dans le temps restant de la séance j'ai réparé le chargeur du Nerf pour que à chaque tir la seconde cartouche se positionne correctement.
 J'ai également cherché une solution pour fixer le servomoteur au Nerf de manière solide.
 Et enfin j'ai cherché une solution pour déclencher un chronomètre si un objet était détecté par la caméra Pixy.
+
+Séance du 06 février 2018.
+
+Durant les vacances de ski j'ai avancé mon programme et j'arrive désormais à calculer la trajectoire approximative d'un objet qui passe devant la caméra. (mon programme est disponible sur ce github).
+Donc durant cette séance j'ai commencé par implémenter à ce code l'utilisation du servomoteur et j'ai testé mon programme en lançant un objet de couleur devant la caméra. J'ai ainsi remarqué plusieurs problèmes, le premier est que le programme fonctionne uniquement si l'objet va de la gauche vers la droite. De plus je n'ai toujours pas trouvé comment faire pour que le servomoteur s'oriente de manière précise en fonction de mes calculs.
+A la fin de la séance j'ai fait des recherches pour savoir quel moteur serait le plus pratique pour faire pivoter ma tourelle, le moteur pas à pas ou le servomoteur. Pour l'instant j'utilise le servomoteur parce que je le maîtrise mieux.

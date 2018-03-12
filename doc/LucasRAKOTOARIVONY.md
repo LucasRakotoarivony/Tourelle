@@ -47,3 +47,11 @@ Tout d'abord j'ai modifié mon programme pour le réinitialiser si on passe un o
 Dans le rapport du 06 février je parle d'un problème lorsque l'objet va de la gauche vers la droite, durant cette séance je l'ai corrigé. Il fallait juste considérer deux cas, le premier si l'objet va de la droite vers la gauche et le second si l'objet va de la gauche vers la droite.
 
 J'ai ajusté mon servomoteur pour qu'il montre où va atterir l'objet reperé par la caméra, pour l'instant le résultat est mitigé en effet le servomoteur pointe la bonne direction mais je ne pense pas qu'il soit très précis.
+
+# Séance du 12 mars 2018
+
+Pour commencer j'ai écrit la partie du code servant à controler le servomoteur permettant de déclencher le tir. Ce code consiste juste à modifier le servowrite du servomoteur.
+
+Ensuite j'ai relié le servomoteur au Nerf et j'ai commencé les essais. J'ai rencontré deux problèmes, le premier est que le matériel que j'ai utilisé pour fixer l'embout du servomoteur et la gachette n'était pas assez solide donc j'ai du prendre des matériaux plus solides, le second problème est que si le servomoteur est laissé sans contrainte c'est toute la partie supérieure du servomoteur qui va tourner et non la gachette.
+
+Je n'ai pas encore résolu le dernier problème est actuellement je fais mes essais en bloquant le servomoteur avec mes mains. Cependant en utilisant cette solution j'arrive à tirer avec mon Nerf.

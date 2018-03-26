@@ -55,3 +55,11 @@ Pour commencer j'ai écrit la partie du code servant à controler le servomoteur
 Ensuite j'ai relié le servomoteur au Nerf et j'ai commencé les essais. J'ai rencontré deux problèmes, le premier est que le matériel que j'ai utilisé pour fixer l'embout du servomoteur et la gachette n'était pas assez solide donc j'ai du prendre des matériaux plus solides, le second problème est que si le servomoteur est laissé sans contrainte c'est toute la partie supérieure du servomoteur qui va tourner et non la gachette.
 
 Je n'ai pas encore résolu le dernier problème est actuellement je fais mes essais en bloquant le servomoteur avec mes mains. Cependant en utilisant cette solution j'arrive à tirer avec mon Nerf.
+
+# Séance du 26 mars 2018
+
+Durant cette séance j'ai perfectionné le système de tir, j'arrive maintenant à tirer avec mon Nerf en continu. Il ne me reste plus qu'a bloquer le servomoteur pour l'empêcher de tourner. Je ferai cela à la séance prochaine.
+
+Ensuite j'ai commencé à travailler sur la structure de la tourelle, je pense installer le Nerf sur une plateforme en carton et mettre cette plateforme sur un servomoteur ou un moteur pas à pas. J'ai également fais des recherches pour trouver un moteur assez puissant pour faire tourner la plateforme rapidement.
+
+De plus j'ai également écouté les différents exposés de mes camarades.

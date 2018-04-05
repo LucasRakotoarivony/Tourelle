@@ -63,3 +63,11 @@ Durant cette séance j'ai perfectionné le système de tir, j'arrive maintenant 
 Ensuite j'ai commencé à travailler sur la structure de la tourelle, je pense installer le Nerf sur une plateforme en carton et mettre cette plateforme sur un servomoteur ou un moteur pas à pas. J'ai également fais des recherches pour trouver un moteur assez puissant pour faire tourner la plateforme rapidement.
 
 De plus j'ai également écouté les différents exposés de mes camarades.
+
+# Séance du 05 avril 2018
+
+Pour commencer j'ai fait la présentation de mon projet et j'ai écouté celles de mes camarades.
+
+Ensuite j'ai finalisé le tir de mon Nerf. J'ai percé deux trous dans la structure du Nerf pour pouvoir fixer le Nerf. Le Nerf tire donc sur commande.
+
+J'ai ensuite chercher un servomoteur qui me servira à faire pivoter ma tourelle, j'ai cherché un servomoteur assez puissant pour faire tourner ma structure aisément. Pour l'instant je vais essayer le servomoteur mg996r mais je changerai sûrement si il n'est pas assez puissant.

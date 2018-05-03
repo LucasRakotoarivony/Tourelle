@@ -71,3 +71,17 @@ Pour commencer j'ai fait la présentation de mon projet et j'ai écouté celles 
 Ensuite j'ai finalisé le tir de mon Nerf. J'ai percé deux trous dans la structure du Nerf pour pouvoir fixer le Nerf. Le Nerf tire donc sur commande.
 
 J'ai ensuite chercher un servomoteur qui me servira à faire pivoter ma tourelle, j'ai cherché un servomoteur assez puissant pour faire tourner ma structure aisément. Pour l'instant je vais essayer le servomoteur mg996r mais je changerai sûrement si il n'est pas assez puissant.
+
+# Séance du 09 avril 2018
+
+J'ai décidé d'utiliser un servomoteur HS-311 pour faire pivoter ma tourelle. J'ai donc vissé l'embout et je l'ai attaché à mon Nerf.
+
+Ensuite j'ai effectué des tests pour savoir quelle position du moteur permet de orienter le Nerf selon la direction indiqué par la caméra.
+
+Et enfin j'ai cherché comment bloquer le servomoteur pour que ce ne soit pas lui qui tourne.
+
+# Séance du 02 mai 2018
+
+Durant cette séance j'ai cherché comment bloquer mon Nerf et j'ai cherché un support pour placer ma tourelle en équilibre. J'ai donc utilisé une planche comme support. J'ai ensuite cherché des vis pour bloquer le moteur.
+
+Finalement cette solution est compliqué à mettre en place car la planche est trop volumineuse et lourde, j'ai donc décidé de créer le support moi-même en utilisant Autodesk, et ensuite aller l'imprimer ce support au Fablab.

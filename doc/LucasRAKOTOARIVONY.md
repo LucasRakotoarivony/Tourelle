@@ -85,3 +85,9 @@ Et enfin j'ai cherché comment bloquer le servomoteur pour que ce ne soit pas lu
 Durant cette séance j'ai cherché comment bloquer mon Nerf et j'ai cherché un support pour placer ma tourelle en équilibre. J'ai donc utilisé une planche comme support. J'ai ensuite cherché des vis pour bloquer le moteur.
 
 Finalement cette solution est compliqué à mettre en place car la planche est trop volumineuse et lourde, j'ai donc décidé de créer le support moi-même en utilisant Autodesk, et ensuite aller l'imprimer ce support au Fablab.
+
+# Séance du 07 mai 2018
+
+Pendant cette séance j'ai crée le support à l'aide de Autodesk. Pour cela j'ai dù mesurer les dimensions de mon servomoteur et m'aider du datasheet.
+
+Ensuite j'ai converti le fichier de ma pièce en format stl et j'ai envoyé un mail au monsieur du Fablab pour lui demander d'imprimer ma pièce à l'aide de l'imprimante 3D.

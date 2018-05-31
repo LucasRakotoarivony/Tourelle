@@ -1,0 +1,192 @@
+<ges version='0.1'>
+  <project properties='properties;' metadatas='metadatas, name=(string)&quot;Nouveau\ projet&quot;, author=(string)user, render-scale=(double)100, year=(string)2018, format-version=(string)0.1;'>
+    <encoding-profiles>
+      <encoding-profile name='pitivi-profile' description='Profil de codage Pitivi' type='container' preset-name='oggmux' format='application/ogg' >
+        <stream-profile parent='pitivi-profile' id='0' type='video' presence='0' format='video/x-theora, framerate=(fraction)[ 1/2147483647, 2147483647/1 ], width=(int)[ 1, 2147483647 ], height=(int)[ 1, 2147483647 ]' preset-name='theoraenc' restriction='video/x-raw, width=(int)720, height=(int)576, framerate=(fraction)25/1, pixel-aspect-ratio=(fraction)1/1' pass='0' variableframerate='0' />
+        <stream-profile parent='pitivi-profile' id='1' type='audio' presence='0' format='audio/x-vorbis, rate=(int)[ 1, 200000 ], channels=(int)[ 1, 255 ]' preset-name='vorbisenc' restriction='audio/x-raw, channels=(int)2, rate=(int)44100' />
+      </encoding-profile>
+    </encoding-profiles>
+    <ressources>
+      <asset id='file:///home/user/arduino/10.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)15751000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:56:03Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/12.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)18956000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T18:00:32Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/14.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)17109000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T18:04:12Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/16.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)19152000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T18:05:57Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/1.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)17447000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:32:10Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/3.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)27415000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:36:57Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/5.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)6888000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:45:20Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/7.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)10492000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:50:59Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='crossfade' extractable-type-name='GESTransitionClip' properties='properties;' metadatas='metadatas, description=(string)GES_VIDEO_STANDARD_TRANSITION_TYPE_CROSSFADE;' />
+      <asset id='file:///home/user/arduino/9.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)9552000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:54:58Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/VID_20180530_192700.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)18298000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:27:00Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/11.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)10889000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:57:39Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/13.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)10963000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T18:02:21Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/15.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)11669000000;' metadatas='metadatas, video-codec=(string)&quot;H.264\ /\ AVC&quot;, language-code=(string)en, bitrate=(uint)14748522, datetime=(datetime)2018-05-30T18:05:05Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000;' />
+      <asset id='file:///home/user/arduino/2.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)17002000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:34:27Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/VID_20180530_193013.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)24670000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:30:13Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/4.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)17110000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:42:43Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/6.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)13187000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:46:13Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='file:///home/user/arduino/8.mp4' extractable-type-name='GESUriClip' properties='properties, supported-formats=(int)6, duration=(guint64)20854000000;' metadatas='metadatas, audio-codec=(string)&quot;MPEG-4\ AAC\ audio&quot;, maximum-bitrate=(uint)96000, bitrate=(uint)96000, language-code=(string)en, datetime=(datetime)2018-05-30T17:52:51Z, container-format=(string)&quot;ISO\ MP4/M4A&quot;, video-codec=(string)&quot;H.264\ /\ AVC&quot;;' />
+      <asset id='GESTitleClip' extractable-type-name='GESTitleClip' properties='properties;' metadatas='metadatas;' />
+    </ressources>
+    <timeline properties='properties, auto-transition=(boolean)true, snapping-distance=(guint64)1379631465;' metadatas='metadatas, duration=(guint64)141814421644;'>
+      <track caps='video/x-raw(ANY)' track-type='4' track-id='0' properties='properties, async-handling=(boolean)false, message-forward=(boolean)true, caps=(string)&quot;video/x-raw\(ANY\)&quot;, restriction-caps=(string)&quot;video/x-raw\,\ width\=\(int\)720\,\ height\=\(int\)576\,\ framerate\=\(fraction\)25/1&quot;, mixing=(boolean)true;' metadatas='metadatas;'/>
+      <track caps='audio/x-raw(ANY)' track-type='2' track-id='1' properties='properties, async-handling=(boolean)false, message-forward=(boolean)true, caps=(string)&quot;audio/x-raw\(ANY\)&quot;, restriction-caps=(string)&quot;audio/x-raw\,\ format\=\(string\)S32LE\,\ channels\=\(int\)2\,\ rate\=\(int\)44100\,\ layout\=\(string\)interleaved&quot;, mixing=(boolean)true;' metadatas='metadatas;'/>
+      <layer priority='0' properties='properties, auto-transition=(boolean)true;' metadatas='metadatas, volume=(float)1, video::name=(string)&quot;video\ 0&quot;, audio::name=(string)&quot;audio\ 0&quot;;'>
+        <clip id='0' asset-id='file:///home/user/arduino/VID_20180530_192700.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='0' duration='9423533732' inpoint='8874466268' rate='0' properties='properties, name=(string)uriclip57, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 8874466268:1  18298000000:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 8874466268:0.10000000149011612  18298000000:0.10000000149011612 '/>
+          </source>
+        </clip>
+        <clip id='1' asset-id='file:///home/user/arduino/VID_20180530_193013.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='9423533732' duration='6189950204' inpoint='11596379712' rate='0' properties='properties, name=(string)uriclip77, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 11596379712:0.10000000149011612  17786329916:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 11596379712:1  17786329916:1 '/>
+          </source>
+        </clip>
+        <clip id='2' asset-id='file:///home/user/arduino/1.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='15613483936' duration='12078588834' inpoint='5368411166' rate='0' properties='properties, name=(string)uriclip59, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 5368411166:1  17447000000:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 5368411166:0.10000000149011612  17447000000:0.10000000000000001 '/>
+          </source>
+        </clip>
+        <clip id='3' asset-id='file:///home/user/arduino/2.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='27692072770' duration='9596658876' inpoint='7405341124' rate='0' properties='properties, name=(string)uriclip60, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 7405341124:1  17002000000:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 7405341124:0.10000000149011612  17002000000:0.10000000000000001 '/>
+          </source>
+        </clip>
+        <clip id='4' asset-id='file:///home/user/arduino/3.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='37288731646' duration='8835328214' inpoint='9018341297' rate='0' properties='properties, name=(string)uriclip61, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 9018341297:1  17853669511:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 9018341297:0.10000000149011612  17853669511:0.10000000149011612 '/>
+          </source>
+        </clip>
+        <clip id='5' asset-id='file:///home/user/arduino/4.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='46124059860' duration='7243984448' inpoint='0' rate='0' properties='properties, name=(string)uriclip49, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000149011612  7243984448:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  7243984448:1 '/>
+          </source>
+        </clip>
+        <clip id='6' asset-id='file:///home/user/arduino/5.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='53368044308' duration='6888000000' inpoint='0' rate='0' properties='properties, name=(string)uriclip31, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000000000001  6888000000:0.10000000000000001 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  6888000000:1 '/>
+          </source>
+        </clip>
+        <clip id='7' asset-id='file:///home/user/arduino/6.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='60256044308' duration='8833035081' inpoint='4353964919' rate='0' properties='properties, name=(string)uriclip64, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 4353964919:1  13187000000:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 4353964919:0.10000000149011612  13187000000:0.10000000000000001 '/>
+          </source>
+        </clip>
+        <clip id='8' asset-id='file:///home/user/arduino/7.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='69089079389' duration='10492000000' inpoint='0' rate='0' properties='properties, name=(string)uriclip33, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000000000001  10492000000:0.10000000000000001 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  10492000000:1 '/>
+          </source>
+        </clip>
+        <clip id='9' asset-id='file:///home/user/arduino/8.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='79800124725' duration='6082059560' inpoint='5809021819' rate='0' properties='properties, name=(string)uriclip65, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 5809021819:1  11891081379:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 5809021819:0.10000000149011612  11891081379:0.10000000149011612 '/>
+          </source>
+        </clip>
+        <clip id='10' asset-id='file:///home/user/arduino/9.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='85882184285' duration='6289367865' inpoint='0' rate='0' properties='properties, name=(string)uriclip35, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000149011612  6289367865:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  6289367865:1 '/>
+          </source>
+        </clip>
+        <clip id='11' asset-id='file:///home/user/arduino/10.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='92171552150' duration='7573450954' inpoint='0' rate='0' properties='properties, name=(string)uriclip16, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000149011612  7573450954:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  7573450954:1 '/>
+          </source>
+        </clip>
+        <clip id='12' asset-id='file:///home/user/arduino/11.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='99745003104' duration='7086967530' inpoint='0' rate='0' properties='properties, name=(string)uriclip39, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000149011612  7086967530:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  7086967530:1 '/>
+          </source>
+        </clip>
+        <clip id='13' asset-id='file:///home/user/arduino/12.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='106831970634' duration='7763982394' inpoint='0' rate='0' properties='properties, name=(string)uriclip21, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000149011612  7763982394:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  7763982394:1 '/>
+          </source>
+        </clip>
+        <clip id='14' asset-id='file:///home/user/arduino/13.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='114595953028' duration='7251901331' inpoint='0' rate='0' properties='properties, name=(string)uriclip41, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000149011612  7251901331:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  7251901331:1 '/>
+          </source>
+        </clip>
+        <clip id='15' asset-id='file:///home/user/arduino/14.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='121896685589' duration='7521143209' inpoint='6570118179' rate='0' properties='properties, name=(string)uriclip72, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 6570118179:1  14091261388:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 6570118179:0.10000000149011612  14091261388:0.10000000149011612 '/>
+          </source>
+        </clip>
+        <clip id='16' asset-id='file:///home/user/arduino/15.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='129833254742' duration='3963025519' inpoint='4111575183' rate='0' properties='properties, name=(string)uriclip74, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 4111575183:1  8074600702:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 4111575183:0.10000000149011612  8074600702:0.10000000149011612 '/>
+          </source>
+        </clip>
+        <clip id='17' asset-id='file:///home/user/arduino/16.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='133796280261' duration='7594149572' inpoint='0' rate='0' properties='properties, name=(string)uriclip25, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 0:0.10000000149011612  7594149572:0.10000000149011612 '/>
+          </source>
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 0:1  7594149572:1 '/>
+          </source>
+        </clip>
+        <clip id='18' asset-id='file:///home/user/arduino/16.mp4' type-name='GESUriClip' layer-priority='0' track-types='6' start='141390429833' duration='423991811' inpoint='6591986911' rate='0' properties='properties, name=(string)uriclip76, mute=(boolean)false, is-image=(boolean)false;' >
+          <source track-id='0' children-properties='properties, alpha=(double)1, height=(int)576, posx=(int)0, posy=(int)0, width=(int)720;'>
+            <binding type='direct' source_type='interpolation' property='alpha' mode='1' track_id='0' values =' 6591986911:1  7015978722:1 '/>
+          </source>
+          <source track-id='1' children-properties='properties, mute=(boolean)false, volume=(double)1;'>
+            <binding type='direct' source_type='interpolation' property='volume' mode='1' track_id='1' values =' 6591986911:0.10000000149011612  7015978722:0.10000000149011612 '/>
+          </source>
+        </clip>
+      </layer>
+      <groups>
+      </groups>
+    </timeline>
+</project>
+</ges>

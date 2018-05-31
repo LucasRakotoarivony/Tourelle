@@ -1,16 +1,47 @@
 #include <SPI.h>  
 #include <Pixy.h>
 #include <Servo.h> 
+#include <SoftwareSerial.h>  //Software Serial Port  
+#define RxD 10    //Pin 10 pour RX, PB2 sur votre board, a brancher sur le TX du HC-06
+#define TxD 11    //Pin 11 pour TX, PB3 sur votre board, a brancher sur le RX du HC-06
+SoftwareSerial BTSerie(RxD,TxD);  
 
-Servo myservo;
-Pixy pixy;
+
+Servo myservo; //servo se chargeant du tir
+Servo deplace; //servo se chargeant de pivoter
+Pixy pixy; //la caméra
 uint16_t blocks;
-int i=0;int j;
-float x1;float y1;float x2;float y2;float x3;float y3;
-float a;float b;float c;
-float cible=100;
-float delta;float r1;float r2;
-int pos;int final;
+int i=0;
+int j;
+int k=0;
+float x1;
+float y1;
+float x2;
+float y2;
+float x3;
+float y3;//on définit les coordonnés
+
+float a;
+float b;
+float c; //on définit les coefficients
+
+float delta;
+float r1;
+float r2; //on définit les racines
+
+float cible=50;
+int pos=-100;
+int final=-5;
+int color=2; //variable non utilisée mais utile si application bluetooth
+int start=1;
+
+long temps1;
+long temps2;
+long diff; //permet de gérer le temps
+
+int tir=0;
+int calme=95; //les positions de tir et de rechargement
+char recvChar; 
 
 void setup()
 {
@@ -18,74 +49,163 @@ void setup()
   Serial.println("Début");
   pixy.init();
   myservo.attach(8);
-  myservo.write(90);
+  myservo.write(calme);
+  deplace.attach(9);
+  deplace.write(30);
+  
+  //on met les servo au bon endroit
+  
+/*  pinMode(RxD, INPUT);  
+  pinMode(TxD, OUTPUT);  
+  BTSerie.begin(9600); 
+  Serial.println("En attente de la commandes AT"); 
+  delay(100);
+  BTSerie.print("AT+BAUD4");
+  delay(500); */
+  //cette partie servait pour le bluetooth
 }
-void loop() {
- blocks=pixy.getBlocks();
- delay(30);
- if(blocks) {
-   i++;
-   if(i==3) {
-     for(j=0;j<blocks;j++) {
-       if(pixy.blocks[j].width>30 && pixy.blocks[j].height>30) {
-         x1=pixy.blocks[0].x;y1=pixy.blocks[0].y;
-         }
-       }
-     }
-     if(i==5) {
-     for(j=0;j<blocks;j++) {
-       if(pixy.blocks[j].width>30 && pixy.blocks[j].height>30) {
-         x2=pixy.blocks[0].x;y2=pixy.blocks[0].y;
-         }
+void loop() {  
+  /* if (BTSerie.available()) {  
+  }
+    recvChar = BTSerie.read(); 
+    if(recvChar=='S') {
+      start=1;
+    }
+    else if(recvChar=='N') {
+      start=0;
+      //i=0;
+      //color=8;
+    }
+    else {
+      color=recvChar-'0';
+    }  
+    Serial.println(color);
+  }*/
+  //cette partie servait pour le bluetooth
+  
+  temps1=millis();
+  diff=temps1-temps2;//on calcule la durée entre deux détections
+  
+  blocks=pixy.getBlocks(); //c'est cette fonction qui bloque le bluetooth
+  delay(30);
+  if(blocks && pixy.blocks[0].width>20) {
+    i++;
+    temps2=temps1;
+    if(i==2) {
+      for(j=0;j<blocks;j++) {
+        if(pixy.blocks[j].width>20 && pixy.blocks[j].height>20) {
+          x1=pixy.blocks[0].x;
+          y1=pixy.blocks[0].y;
         }
-     }
-     if(i==7) {
-     for(j=0;j<blocks;j++) {
-       if(pixy.blocks[j].width>30 && pixy.blocks[j].height>30) {
-         x3=pixy.blocks[0].x;y3=pixy.blocks[0].y;
-         }
+      }
+    }
+    if(i==4) {
+      for(j=0;j<blocks;j++) {
+        if(pixy.blocks[j].width>20 && pixy.blocks[j].height>20) {
+          x2=pixy.blocks[0].x;
+          y2=pixy.blocks[0].y;
         }
-       }
+      }
+    }
+    if(i==6) {
+      for(j=0;j<blocks;j++) {
+        if(pixy.blocks[j].width>20 && pixy.blocks[j].height>20) {
+          x3=pixy.blocks[0].x;
+          y3=pixy.blocks[0].y;
+        }
+      }
+    }
   }
-//if(i>15) {i=0;}
-//Serial.println(i);
-//Serial.print(x1);Serial.print("   ");Serial.print(x2);Serial.print("   ");Serial.println(x3);
-//Serial.print(y1);Serial.print("   ");Serial.print(y2);Serial.print("   ");Serial.println(y3);
-if(x1!=0 && x2!=0 && x3!=0 && x1<x3) {
-  c=y1-a*x1*x1-b*x1;
-  b=(y2-a*x2*x2-c)/x2;
-  a=(y3-b*x3-c)/(x3*x3);
-  delta=b*b-4*a*(c-cible);
-  if(delta<=0) {Serial.println("Cible intouchable");}
-  else {r1=(-b-sqrt(delta))/(2*a);r2=(-b+sqrt(delta))/(2*a);
-    if(x3-x1>0) {Serial.println(r2);pos=(int) (r2/5);
-  final=(int) (r2*0.6);}
-    else {Serial.println(r1);pos=(int) (r1/5);
-  final=(int) (r1*0.6);}
+  //dans cette partie on affecte les coordonnées de l'objet toutes les 60ms
+ 
+  
+  if(start==1) {  
+    if(x1!=0 && x2!=0 && x3!=0 && x1<x3) {
+      c=y1-a*x1*x1-b*x1;
+      b=(y2-a*x2*x2-c)/x2;
+      a=(y3-b*x3-c)/(x3*x3);
+      delta=b*b-4*a*(c-cible);
+      if(delta<=0) {
+        Serial.println("Cible intouchable");
+      }
+      else {
+        r1=(-b-sqrt(delta))/(2*a);
+        r2=(-b+sqrt(delta))/(2*a);
+        if(x3-x1>0) {
+          Serial.println(r2);
+          pos=(int) (r2/14);
+        }
+        else {
+          Serial.println(r1);
+          pos=(int) (r1/14);
+        }
+      }
+    }
+    //on calcule la trajectoire de l'objet et on détermine à quelle moment 
+    //il pourrait etre toucher par le Nerf et on détermine pos
+
+
+    else if(x1!=0 && x2!=0 && x3!=0 && x1>x3) {
+      c=y3-a*x3*x3-b*x3;
+      b=(y2-a*x2*x2-c)/x2;
+      a=(y1-b*x1-c)/(x1*x1);
+      delta=b*b-4*a*(c-cible);
+      if(delta<=0) {
+        Serial.println("Cible intouchable");
+      }
+      else {
+        r1=(-b-sqrt(delta))/(2*a);
+        r2=(-b+sqrt(delta))/(2*a);
+        if(x3-x1>0) {
+          Serial.println(r2);
+          pos=(int) (r2/14);
+        }
+        else {
+          Serial.println(r1);
+          pos=(int) (r1/14);
+        }
+      }
+    }
+    //idem mais dans l'autre sens, 
+    //si on ne fait pas ce cas l'arduino détecte l'objet à l'infini dans un sens
+    
+  if(pos<20 && pos>-20) {pos+=20;}
+  if(pos>80 && pos<100) {pos-=20;}
+    if(pos>0 && pos<=60) {
+      deplace.write(pos);
+      delay(20);
+      while(k<1) {
+        myservo.write(tir);
+        delay(1200);
+        myservo.write(calme);
+        delay(800);
+        Serial.println("tir");
+        k++;
+      }
+      a=0;
+      b=0;
+      c=0;
+      i=0;
+      pos=0;
+    }
+    //si l'objet est dans la range de tir du nerf on le décale et on tire
+    
+    Serial.print("Cible touchable en ");
+    Serial.print(r1);  
+    Serial.print(" ou  ");
+    Serial.println(r2);
+    Serial.print("pos :");
+    Serial.println(pos);
+    Serial.print("y=");Serial.print(a);Serial.print("x*x+");
+    Serial.print(b);Serial.print("x+");Serial.println(c);
+    Serial.println(i);
+      if(diff>3000) {
+      i=0;
+      a=0;
+      b=0;
+      c=0;
+      k=0;
+      //si on ne détecte rien pendant 3s on réinitialise les valeurs;
+    }
   }
 }
-  
-  
-  else if(x1!=0 && x2!=0 && x3!=0 && x1>x3) {
-  c=y3-a*x3*x3-b*x3;
-  b=(y2-a*x2*x2-c)/x2;
-  a=(y1-b*x1-c)/(x1*x1);
-  delta=b*b-4*a*(c-cible);
-  if(delta<=0) {Serial.println("Cible intouchable");}
-  else {r1=(-b-sqrt(delta))/(2*a);r2=(-b+sqrt(delta))/(2*a);
-    if(x3-x1>0) {Serial.println(r2);pos=(int) (r2/5);
-  final=(int) (r2*0.6);}
-    else {Serial.println(r1);pos=(int) (r1/5);
-  final=(int) (r1*0.6);}
-  }
-  }
-  
-    if(final>=0 && final<=180) {myservo.write(pos);}
-  Serial.print("Cible touchable en ");Serial.print(r1);  Serial.print(" ou  ");Serial.println(r2);
-  Serial.println(final);
-//Serial.println(c);
-Serial.print("y=");Serial.print(a);Serial.print("x*x+");Serial.print(b);Serial.print("x+");Serial.println(c);
-Serial.println(i);
-if(i>=9) {i=0;a=0;b=0;c=0;myservo.write(90);Serial.println("zala");}
-}
-//1:vert  2:bleu  3:rien  4:jaune  5:rouge  6:violet  7:orange
